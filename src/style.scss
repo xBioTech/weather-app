@@ -1,0 +1,50 @@
+$section-color: #1d213a;
+$bgcolor: #100e1c;
+$fontcolor: white;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: $bgcolor;
+}
+
+p{
+  color: $fontcolor;
+}
+
+h1{
+  color: $fontcolor;
+}
+
+
+
+.main-content-div{
+
+  background-color: $section-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+
+  .min-max-div{
+    display: flex;
+    gap: 1.5em;
+  }
+
+  .degrees{
+    font-size: 2.5rem;
+  }
+
+  .my-location{
+    font-size: 1.5em;
+  }
+  
+  .weather-condition-image{
+    max-width: 10%;
+  }
+}
