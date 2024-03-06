@@ -1,4 +1,5 @@
 import cloudyRainyIcon from '../assets/cloudyrainy.png';
+import mapMarkerIcon from '../assets/map-marker.svg';
 
 function createMainSection() {
   const contentDiv = document.getElementById('content');
@@ -18,11 +19,22 @@ function createMainSection() {
 
   mainContentDiv.appendChild(weatherImage);
 
+  const locationDiv = document.createElement('div');
+  locationDiv.classList.add('location-div');
+
+  const mapMarkerImage = new Image();
+  mapMarkerImage.src = mapMarkerIcon;
+  mapMarkerImage.classList.add('map-marker');
+
+  locationDiv.appendChild(mapMarkerImage);
+
   const locationParagraph = document.createElement('p');
   locationParagraph.classList.add('location');
   locationParagraph.textContent = 'Karlsruhe';
 
-  mainContentDiv.appendChild(locationParagraph);
+  locationDiv.appendChild(locationParagraph);
+
+  mainContentDiv.appendChild(locationDiv);
 
   const degreeParagraph = document.createElement('p');
   degreeParagraph.classList.add('degrees');
