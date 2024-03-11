@@ -1,5 +1,5 @@
 $section-color: #1d213a;
-$bgcolor: #100e1c;
+$bgcolor: #151623;
 $fontcolor: white;
 
 * {
@@ -71,4 +71,21 @@ h1{
   .weather-condition-image{
     max-width: 10%;
   }
+}
+
+.todays-highlights{
+.wind{
+  background-color: $section-color;
+}
+.humidity{
+  background-color: $section-color;
+}
+
+.feels-like{
+  background-color: $section-color;
+}
+
+.precipitation{
+  background-color: $section-color;
+}
 }
