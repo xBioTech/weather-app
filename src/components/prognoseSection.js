@@ -1,6 +1,4 @@
-import cloudyRainyIcon from '../assets/cloudyrainy.png';
-
-function createWeatherPrognoseSection() {
+function createWeatherPrognoseSection(forecastApiData) {
   const contentDiv = document.getElementById('content');
 
   const weatherPrognoseDiv = document.createElement('div');
@@ -15,18 +13,18 @@ function createWeatherPrognoseSection() {
   day1PrognoseDiv.appendChild(day1Paragraph);
 
   const weatherImage = new Image();
-  weatherImage.src = cloudyRainyIcon;
+  weatherImage.src = forecastApiData.forecast.forecastday[0].day.condition.icon;
   weatherImage.classList.add('weather-condition-image');
 
   day1PrognoseDiv.appendChild(weatherImage);
 
   const day1MaxTemp = document.createElement('p');
-  day1MaxTemp.textContent = '12°C';
+  day1MaxTemp.textContent = `${forecastApiData.forecast.forecastday[0].day.maxtemp_c}°C`;
 
   day1PrognoseDiv.appendChild(day1MaxTemp);
 
   const day1MinTemp = document.createElement('p');
-  day1MinTemp.textContent = '0°C';
+  day1MinTemp.textContent = `${forecastApiData.forecast.forecastday[0].day.mintemp_c}°C`;
 
   day1PrognoseDiv.appendChild(day1MinTemp);
 
@@ -41,18 +39,18 @@ function createWeatherPrognoseSection() {
   day2PrognoseDiv.appendChild(day2Paragraph);
 
   const weatherImage2 = new Image();
-  weatherImage2.src = cloudyRainyIcon;
+  weatherImage2.src = forecastApiData.forecast.forecastday[1].day.condition.icon;
   weatherImage2.classList.add('weather-condition-image');
 
   day2PrognoseDiv.appendChild(weatherImage2);
 
   const day2MaxTemp = document.createElement('p');
-  day2MaxTemp.textContent = '10°C';
+  day2MaxTemp.textContent = `${forecastApiData.forecast.forecastday[1].day.maxtemp_c}°C`;
 
   day2PrognoseDiv.appendChild(day2MaxTemp);
 
   const day2MinTemp = document.createElement('p');
-  day2MinTemp.textContent = '1°C';
+  day2MinTemp.textContent = `${forecastApiData.forecast.forecastday[1].day.mintemp_c}°C`;
 
   day2PrognoseDiv.appendChild(day2MinTemp);
 
@@ -67,18 +65,18 @@ function createWeatherPrognoseSection() {
   day3PrognoseDiv.appendChild(day3Paragraph);
 
   const weatherImage3 = new Image();
-  weatherImage3.src = cloudyRainyIcon;
+  weatherImage3.src = forecastApiData.forecast.forecastday[2].day.condition.icon;
   weatherImage3.classList.add('weather-condition-image');
 
   day3PrognoseDiv.appendChild(weatherImage3);
 
   const day3MaxTemp = document.createElement('p');
-  day3MaxTemp.textContent = '10°C';
+  day3MaxTemp.textContent = `${forecastApiData.forecast.forecastday[2].day.maxtemp_c}°C`;
 
   day3PrognoseDiv.appendChild(day3MaxTemp);
 
   const day3MinTemp = document.createElement('p');
-  day3MinTemp.textContent = '2°C';
+  day3MinTemp.textContent = `${forecastApiData.forecast.forecastday[2].day.mintemp_c}°C`;
 
   day3PrognoseDiv.appendChild(day3MinTemp);
 
