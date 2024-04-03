@@ -58,7 +58,7 @@ function createTodaysHighlightsSection() {
   precipitationDiv.classList.add('precipitation');
 
   const precipitationHeadline = document.createElement('p');
-  precipitationHeadline.textContent = 'Precipitation in %';
+  precipitationHeadline.textContent = 'Chance of Rain in %';
 
   precipitationDiv.appendChild(precipitationHeadline);
 

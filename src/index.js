@@ -2,11 +2,15 @@ import './style.scss';
 import createMainSection from './components/mainSection';
 import createWeatherPrognoseSection from './components/prognoseSection';
 import createTodaysHighlightsSection from './components/highlightSection';
-import fetchTodayWeather from './functions/fetchTodayWeather';
+import fetchCurrentWeather from './functions/fetchCurrentWeather';
 import fetchWeatherForecast from './functions/fetchWeatherForecast';
 
-createMainSection();
-createWeatherPrognoseSection();
-createTodaysHighlightsSection();
-fetchTodayWeather();
-fetchWeatherForecast();
+async function runCode() {
+  const apiDataCurrent = await fetchCurrentWeather();
+  const apiDataForecast = await fetchWeatherForecast();
+  createMainSection(apiDataCurrent, apiDataForecast);
+  createWeatherPrognoseSection();
+  createTodaysHighlightsSection();
+}
+
+runCode();

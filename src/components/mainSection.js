@@ -1,7 +1,6 @@
-import cloudyRainyIcon from '../assets/cloudyrainy.png';
 import mapMarkerIcon from '../assets/map-marker.svg';
 
-function createMainSection() {
+function createMainSection(apiData, forecastApiData) {
   const contentDiv = document.getElementById('content');
 
   const mainContentDiv = document.createElement('div');
@@ -14,7 +13,7 @@ function createMainSection() {
   mainContentDiv.appendChild(myLocationTitle);
 
   const weatherImage = new Image();
-  weatherImage.src = cloudyRainyIcon;
+  weatherImage.src = apiData.current.condition.icon;
   weatherImage.classList.add('weather-condition-image');
 
   mainContentDiv.appendChild(weatherImage);
@@ -30,7 +29,7 @@ function createMainSection() {
 
   const locationParagraph = document.createElement('p');
   locationParagraph.classList.add('location');
-  locationParagraph.textContent = 'Karlsruhe';
+  locationParagraph.textContent = apiData.location.name;
 
   locationDiv.appendChild(locationParagraph);
 
@@ -38,13 +37,13 @@ function createMainSection() {
 
   const degreeParagraph = document.createElement('p');
   degreeParagraph.classList.add('degrees');
-  degreeParagraph.textContent = '12°C';
+  degreeParagraph.textContent = `${apiData.current.temp_c}°C`;
 
   mainContentDiv.appendChild(degreeParagraph);
 
   const weatherConditionsParagraph = document.createElement('p');
   weatherConditionsParagraph.classList.add('weather-conditions');
-  weatherConditionsParagraph.textContent = 'Sunny';
+  weatherConditionsParagraph.textContent = apiData.current.condition.text;
 
   mainContentDiv.appendChild(weatherConditionsParagraph);
 
@@ -53,13 +52,13 @@ function createMainSection() {
 
   const minimumParagraph = document.createElement('p');
   minimumParagraph.classList.add('min-degrees');
-  minimumParagraph.textContent = 'min temp: 0°C';
+  minimumParagraph.textContent = `Min: ${forecastApiData.forecast.forecastday[0].day.mintemp_c}°C`;
 
   minMaxDiv.appendChild(minimumParagraph);
 
   const maximumParagraph = document.createElement('p');
   maximumParagraph.classList.add('max-degrees');
-  maximumParagraph.textContent = 'max temp: 12°C';
+  maximumParagraph.textContent = `Max: ${forecastApiData.forecast.forecastday[0].day.maxtemp_c}°C`;
 
   minMaxDiv.appendChild(maximumParagraph);
 
