@@ -54,7 +54,7 @@ h1{
   }
   
   .weather-condition-image{
-    max-width: 10%;
+    max-width: 20%;
   }
 }
 
@@ -71,9 +71,15 @@ h1{
   .weather-condition-image{
     max-width: 10%;
   }
+
+  .day-prognose p {
+    margin: 0;
+    padding: 0 10px;
+  }
 }
 
 .todays-highlights{
+  
 .wind{
   background-color: $section-color;
 }
@@ -88,4 +94,17 @@ h1{
 .precipitation{
   background-color: $section-color;
 }
+
+.sunrise{
+  background-color: $section-color;
+}
+
+.sunset{
+  background-color: $section-color;
+}
+
+.moon-illumination{
+  background-color: $section-color;
+}
+
 }

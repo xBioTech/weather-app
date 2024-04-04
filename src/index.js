@@ -10,7 +10,7 @@ async function runCode() {
   const apiDataForecast = await fetchWeatherForecast();
   createMainSection(apiDataCurrent, apiDataForecast);
   createWeatherPrognoseSection(apiDataForecast);
-  createTodaysHighlightsSection();
+  createTodaysHighlightsSection(apiDataForecast);
 }
 
 runCode();
