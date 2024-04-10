@@ -4,7 +4,11 @@ function createTodaysHighlightsSection(apiData) {
   const todaysHighlightsDiv = document.createElement('div');
   todaysHighlightsDiv.classList.add('todays-highlights');
 
+  const gridDiv = document.createElement('div');
+  gridDiv.classList.add('highlights-grid');
+
   const headline = document.createElement('h1');
+  headline.classList.add('highlights-headline');
   headline.textContent = 'Todays Highlights';
 
   todaysHighlightsDiv.appendChild(headline);
@@ -22,7 +26,7 @@ function createTodaysHighlightsSection(apiData) {
 
   windDiv.appendChild(windParagraph);
 
-  todaysHighlightsDiv.appendChild(windDiv);
+  gridDiv.appendChild(windDiv);
 
   const humidityDiv = document.createElement('div');
   humidityDiv.classList.add('humidity');
@@ -37,7 +41,7 @@ function createTodaysHighlightsSection(apiData) {
 
   humidityDiv.appendChild(humidityParagraph);
 
-  todaysHighlightsDiv.appendChild(humidityDiv);
+  gridDiv.appendChild(humidityDiv);
 
   const feelsLikeDiv = document.createElement('div');
   feelsLikeDiv.classList.add('feels-like');
@@ -52,7 +56,7 @@ function createTodaysHighlightsSection(apiData) {
 
   feelsLikeDiv.appendChild(feelsLikeParagraph);
 
-  todaysHighlightsDiv.appendChild(feelsLikeDiv);
+  gridDiv.appendChild(feelsLikeDiv);
 
   const precipitationDiv = document.createElement('div');
   precipitationDiv.classList.add('precipitation');
@@ -67,7 +71,7 @@ function createTodaysHighlightsSection(apiData) {
 
   precipitationDiv.appendChild(precipitationParagraph);
 
-  todaysHighlightsDiv.appendChild(precipitationDiv);
+  gridDiv.appendChild(precipitationDiv);
 
   const sunriseDiv = document.createElement('div');
   sunriseDiv.classList.add('sunrise');
@@ -82,7 +86,7 @@ function createTodaysHighlightsSection(apiData) {
 
   sunriseDiv.appendChild(sunriseParagraph);
 
-  todaysHighlightsDiv.appendChild(sunriseDiv);
+  gridDiv.appendChild(sunriseDiv);
 
   const sunsetDiv = document.createElement('div');
   sunsetDiv.classList.add('sunset');
@@ -97,7 +101,7 @@ function createTodaysHighlightsSection(apiData) {
 
   sunsetDiv.appendChild(sunsetParagraph);
 
-  todaysHighlightsDiv.appendChild(sunsetDiv);
+  gridDiv.appendChild(sunsetDiv);
 
   const moonIlluminationDiv = document.createElement('div');
   moonIlluminationDiv.classList.add('moon-illumination');
@@ -112,7 +116,9 @@ function createTodaysHighlightsSection(apiData) {
 
   moonIlluminationDiv.appendChild(moonIlluminationParagraph);
 
-  todaysHighlightsDiv.appendChild(moonIlluminationDiv);
+  gridDiv.appendChild(moonIlluminationDiv);
+
+  todaysHighlightsDiv.appendChild(gridDiv);
 
   contentDiv.appendChild(todaysHighlightsDiv);
 }
