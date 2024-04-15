@@ -1,6 +1,6 @@
-async function fetchCurrentWeather() {
+async function fetchCurrentWeather(searchbarValue) {
   try {
-    const response = await fetch('https://api.weatherapi.com/v1/current.json?key=5ef2cc7df56f4d9494d203100242002&q=karlsruhe', { mode: 'cors' });
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=5ef2cc7df56f4d9494d203100242002&q=${searchbarValue}`, { mode: 'cors' });
     if (!response.ok) {
       throw new Error('something went wrong');
     }
