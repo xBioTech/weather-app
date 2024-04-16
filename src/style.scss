@@ -64,11 +64,11 @@ h1{
 
   .day-prognose{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     p{
-      max-width: 15%;
+      max-width: 5%;
     }
   }
 
@@ -76,10 +76,6 @@ h1{
     max-width: 10%;
   }
 
-  .day-prognose p {
-    margin: 0;
-    padding: 0 10px;
-  }
 }
 
 .todays-highlights{
