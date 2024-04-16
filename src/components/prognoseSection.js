@@ -1,4 +1,4 @@
-function createWeatherPrognoseSection(forecastApiData) {
+function createWeatherPrognoseSection(forecastApiData, weekdays) {
   const contentDiv = document.getElementById('content');
 
   const weatherPrognoseDiv = document.createElement('div');
@@ -8,7 +8,7 @@ function createWeatherPrognoseSection(forecastApiData) {
   day1PrognoseDiv.classList.add('day-prognose');
 
   const day1Paragraph = document.createElement('p');
-  day1Paragraph.textContent = 'Day 1';
+  day1Paragraph.textContent = weekdays[0];
 
   day1PrognoseDiv.appendChild(day1Paragraph);
 
@@ -34,7 +34,7 @@ function createWeatherPrognoseSection(forecastApiData) {
   day2PrognoseDiv.classList.add('day-prognose');
 
   const day2Paragraph = document.createElement('p');
-  day2Paragraph.textContent = 'Day 2';
+  day2Paragraph.textContent = weekdays[1];
 
   day2PrognoseDiv.appendChild(day2Paragraph);
 
@@ -60,7 +60,7 @@ function createWeatherPrognoseSection(forecastApiData) {
   day3PrognoseDiv.classList.add('day-prognose');
 
   const day3Paragraph = document.createElement('p');
-  day3Paragraph.textContent = 'Day 3';
+  day3Paragraph.textContent = weekdays[2];
 
   day3PrognoseDiv.appendChild(day3Paragraph);
 
