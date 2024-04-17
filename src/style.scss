@@ -3,27 +3,24 @@ $bgcolor: #151623;
 $fontcolor: white;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-body{
-    background-color: $bgcolor;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-p{
+body {
+  background-color: $bgcolor;
+}
+
+p {
   color: $fontcolor;
 }
 
-h1{
+h1 {
   color: $fontcolor;
 }
 
-
-
-.main-content-div{
-
+.main-content-div {
   background-color: $section-color;
   display: flex;
   flex-direction: column;
@@ -31,123 +28,129 @@ h1{
   align-items: center;
   margin: 20px 20px 20px 20px;
 
-  .min-max-div{
+  .min-max-div {
     display: flex;
     gap: 1.5em;
   }
 
-  .location-div{
+  .location-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    .map-marker{
+    .map-marker {
       max-width: 30%;
     }
   }
 
-  .degrees{
+  .degrees {
     font-size: 2.5rem;
   }
 
-  .my-location{
+  .my-location {
     font-size: 1.5em;
   }
-  
-  .weather-condition-image{
+
+  .weather-condition-image {
     max-width: 20%;
   }
 }
 
-.weather-prognose{
+.weather-prognose {
   background-color: $section-color;
   margin: 20px 20px 20px 20px;
 
-  .day-prognose{
+  .day-prognose {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    p{
+    p {
       max-width: 5%;
     }
   }
 
-  .weather-condition-image{
+  .weather-condition-image {
     max-width: 10%;
   }
-
 }
 
-.todays-highlights{
+.todays-highlights {
   margin: 20px 20px 20px 20px;
   text-align: center;
-  
-  .highlights-headline{
+
+  .highlights-headline {
     margin: 10px;
   }
 
-  .highlights-grid{
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-    
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
-  
-.wind{
-  background-color: $section-color;
-}
-.humidity{
-  background-color: $section-color;
-}
+  .wind {
+    background-color: $section-color;
+  }
+  .humidity {
+    background-color: $section-color;
+  }
 
-.feels-like{
-  background-color: $section-color;
-}
+  .feels-like {
+    background-color: $section-color;
+  }
 
-.precipitation{
-  background-color: $section-color;
-}
+  .precipitation {
+    background-color: $section-color;
+  }
 
-.sunrise{
-  background-color: $section-color;
-}
+  .sunrise {
+    background-color: $section-color;
+  }
 
-.sunset{
-  background-color: $section-color;
-}
+  .sunset {
+    background-color: $section-color;
+  }
 
-.moon-illumination{
-  background-color: $section-color;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
+  .moon-illumination {
+    background-color: $section-color;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
-.searchbar-div{
-
+.searchbar-div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-top: 5px;
 
-  .searchbar{
-
+  .searchbar {
     padding: 0.3em;
     border: none;
     border-radius: 8px;
     outline: none;
   }
 
-  .search-icon{
+  .search-icon {
     max-width: 10%;
     cursor: pointer;
   }
 
-  ::placeholder{
+  ::placeholder {
     color: $section-color;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #content {
+    display: flex;
+
+    .main-content-div {
+      height: 85vh;
+      justify-content: initial;
+      padding: 2em 2em 2em 2em;
+      gap: 2em;
+    }
   }
 }
