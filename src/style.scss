@@ -160,7 +160,6 @@ h1 {
   #content {
     display: flex;
 
-
     .main-content-div {
       height: 90vh;
       padding: 2em 2em 2em 2em;
@@ -175,37 +174,46 @@ h1 {
           .map-marker{
             max-width: 40%;
           }
-
       }
-
       .degrees{
         font-size: 4rem;
       }
     }
-.weather-prognose{
-  width: 100%;
-  padding: 0em 2em;
-.day-prognose{
-  justify-content: space-around;
-  gap: 40px;
-  img{
-    max-width: 100%;
-  }
-  p{
-    max-width: 10%;
-    font-size: 1.2rem;
-  }
-}
-}
-  }
-.todays-highlights{
+    #right-side{
+      display: flex;
+      margin: auto auto;
+      gap: 3em;
+      .weather-prognose{
+        padding: 2em 2em;
+        align-self: center;
+      .day-prognose{
+        justify-content: space-around;
+        gap: 40px;
+        img{
+          max-width: 100%;
+        }
+        p{
+          max-width: 10%;
+          font-size: 1.2rem;
+        }
+      }
+      }
+        }
+      .todays-highlights{
+        font-size: 1.2rem;
+        .highlights-grid{
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .wind, .humidity, .feels-like, .precipitation, .sunrise, .sunset{
+          padding: 1em 1em;
+        }
+        .moon-illumination{
+          grid-column-start: 1;
+          grid-column-end: 4;
+          padding: 1em 1em;
+        }
+      }
+    }
 
-  .highlights-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .moon-illumination{
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
 }
-}
+

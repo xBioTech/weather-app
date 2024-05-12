@@ -26,6 +26,8 @@ runCode('london');
 
 submitBtn.addEventListener('click', () => {
   const inputFieldValue = inputField.value;
-  clearContent();
+  if (inputFieldValue !== '') {
+    clearContent();
+  }
   runCode(inputFieldValue);
 });
